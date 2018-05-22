@@ -1,0 +1,68 @@
+/* container */
+#container {
+    width:100%;
+    background: black;
+}
+
+/* building */
+#building {
+    position:absolute;
+    width: 1500px;
+    height: 800px;
+    top:50%;
+    right: 0%;
+    transform: translateY(-50%);
+    background: #222;
+}
+
+/* elevator */
+#elevator_area {
+    position: relative;
+    float:right;
+    width: 150px;
+    height: 800px;
+    background: #ff0000;
+}
+#elevator{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    top:600px;
+    background: #ffaa00;
+}
+#button_area {
+    position:relative;
+    width: 50px;
+    height: 200px;
+    cursor: pointer;
+    background: #ffff00;
+}
+.button{
+    position:relative;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    transition: all 1s;
+}
+
+/* floor */
+.floor {
+    position: relative;
+    width: 1350px;
+    height: 200px;
+    opacity: 0.4;
+    transition: all 3s;
+    background: #0000ff;
+}
+
+.on {
+    transition-delay: 3s;
+    opacity: 1;
+}
+
+
+
+
+
+
+
