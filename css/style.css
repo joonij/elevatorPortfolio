@@ -31,32 +31,59 @@
 
 /* elevator */
 #elevator_area {
-    position: relative;
-    float:right;
-    width: 150px;
-    height: 750px;
-    margin: 115px 0px 65px 0px;
-    background: #ff0000;
-}
-#elevator{
     position: absolute;
     width: 150px;
-    height: 250px;
-    top:500px;
-    background: #ffaa00;
+    height: 680px;
+    margin: 115px 0px 135px 0px;
+    right: 0;
+}
+#move_ele {
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    top:550px;
+}
+#door {
+    position:absolute;
+    display: inline-block;
+    width: 130px;
+    height: 145px;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+}
+#left_door {
+    position: relative;
+    display: inline-block;
+    width: 62px;
+    height: 145px;
+    background:url(../img/left_door.png) no-repeat;
+    background-size: cover;
+    z-index: 7;
+}
+#right_door {
+    position: relative;
+    display: inline-block;
+    width: 62px;
+    height: 145px;
+    background:url(../img/right_door.png) no-repeat;
+    background-size: cover;
+    z-index: 6;
 }
 #button_area {
-    position:relative;
-    width: 50px;
-    height: 150px;
+    position:absolute;
+    width: 25px;
+    height: 90px;
+    left:10%;
     cursor: pointer;
-    background: #ffff00;
+    z-index: 10;
 }
 .button{
     position:relative;
-    width: 50px;
-    height: 50px;
-    transition: all 1s;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
 }
 .button:nth-child(1) {
     background: #ff0000;
@@ -71,8 +98,10 @@
 /* floor */
 .floor {
     position: relative;
-    width: 1550px;
+    width: 1700px;
     height:250px;
+    float: right;
+    border-radius: 15px;
     opacity: 0;
     transition: all 3s;
 }
@@ -81,37 +110,96 @@
     transition-delay: 3s;
     opacity: 1;
 }
+.elevator_in{
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    right: 0;
+}
+.elevator_sw{
+    position: absolute;
+    bottom: 120px;
+    right: 155px;
+    cursor: pointer;
+    z-index: 10;
+}
+.project_area {
+    position: relative;
+    height:180px;
+    background:url(../img/project_area2.png);
+    background-size: cover;
+    background-position: right;
+    border-radius: 15px 0px 0px 0px;
+    z-index: 9;
+}
+.floor_interior {
+    position: relative;
+    height: 70px;
+    background:url(../img/floorinterior.png);
+    background-size: cover;
+    background-position: right;
+    border-radius: 0px 0px 0px 15px;
+}
 #floor_3 {
     margin-top: 115px;
 }
 #floor_1 {
+    width: 1220px;
     margin-bottom: 65px;
 }
-.project_area {
-    position: relative;
-    width:1550px;
-    height:175px;
-}
-.floor_interior {
-    position: relative;
-    width: 1550px;
-    height: 75px;
-    background:url(../img/floorinterior.jpg);
-    background-size: contain;
-}
+
 .project {
     position: relative;
     display:inline-block;
-    width:120px;
-    height:100px;
-    margin: 40px 70px 35px 70px;
-    float: right;
     background:#0000ff;
 }
-
-
-
-
-
-
-
+#floor_3 .project:nth-child(1) {
+    width:200px;
+    height:100px;
+    margin: 30px 70px 35px 270px;
+}
+#floor_3 .project:nth-child(2) {
+    width:600px;
+    height:120px;
+    margin: 30px 70px 15px 70px; 
+}
+#floor_3 .project:nth-child(3) {
+    width:110px;
+    height:130px;
+    margin: 30px 70px 15px 70px;
+}
+#floor_2 .project:nth-child(1) {
+    width:200px;
+    height:100px;
+    margin: 30px 100px 35px 270px;
+}
+#floor_2 .project:nth-child(2) {
+    width:135px;
+    height:135px;
+    margin: 30px 115px 0px 70px; 
+}
+#floor_2 .project:nth-child(3) {
+    width:80px;
+    height:130px;
+    margin: 30px 60px 15px 115px;
+}
+#floor_2 .project:nth-child(4) {
+    width:255px;
+    height:70px;
+    margin: 30px 70px 65px 60px;
+}
+#floor_1 .project:nth-child(1) {
+    width:110px;
+    height:110px;
+    margin: 30px 100px 25px 100px;
+}
+#floor_1 .project:nth-child(2) {
+    width:200px;
+    height:90px;
+    margin: 30px 100px 45px 100px; 
+}
+#floor_1 .project:nth-child(3) {
+    width:100px;
+    height:120px;
+    margin: 30px 100px 25px 100px; 
+}

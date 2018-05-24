@@ -3,19 +3,27 @@ $(document).ready(function(){
     
     $("#container").css("height",ht);
     
+    
+    $(".elevator_sw").click(Event, function(){
+        $("#left_door").animate({right:"300px"},4000);
+        $("#right_door").animate({right:"300px"},3000);
+        $("#button_area"
+    });
+    
+    
     $("#button_3").click(function(){
         $(".floor").removeClass("on");
-        $("#elevator").animate({top:"0px"},3000,"easeInOutQuad");
+        $("#move_ele").animate({top:"50px"},3000,"easeInOutQuad");
         $("#floor_3").addClass("on");
     });
     $("#button_2").click(function(){
         $(".floor").removeClass("on");
-        $("#elevator").animate({top:"250px"},3000,"easeInOutQuad");
+        $("#move_ele").animate({top:"300px"},3000,"easeInOutQuad");
         $("#floor_2").addClass("on");
     });
     $("#button_1").click(function(){
         $(".floor").removeClass("on");
-        $("#elevator").animate({top:"500px"},3000,"easeInOutQuad");
+        $("#move_ele").animate({top:"550px"},3000,"easeInOutQuad");
         $("#floor_1").addClass("on");
     });
 });
