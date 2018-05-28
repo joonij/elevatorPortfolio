@@ -1,15 +1,79 @@
+/* open */
+#open {
+    position: absolute;
+    display: inline-block;
+    width:100%;
+    z-index: 100;
+}
+#open_1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    box-shadow: 0px 0px 20px 0px #707070;
+}
+
+#open_2 {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+}
+
+#progress {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: black;
+    pointer-events: none;
+    z-index: 300;
+    text-shadow: 0px 0px 2px #FFFFFF;
+}
+
 /* container */
 #container {
     width:100%;
-    min-height: 900px;
+    min-height: 970px;
     background: url(../img/container.png) no-repeat 50% 100%;
     background-size: contain;
-
 }
-
-
+.people {
+    position: absolute;
+}
+#people_2 {
+    top: 770px;
+    left: 70px;
+    z-index: 10;
+}
+#people_3 {
+    top: 820px;
+    left: 500px;
+    z-index: 10;
+}
+#people_5 {
+    top: 800px;
+    left: 250px;
+    z-index: 10;
+}
+#people_11 {
+    top: 830px;
+    left: 150px;
+    width:50px;
+    z-index: 10;
+}
+#people_18 {
+    top: 840px;
+    left: 600px;
+    width:50px;
+    z-index: 10;
+}
 /* background */
 #background {
+    position: absolute;
     width: 100%;
     height: 850px;
     background:url(../img/background.png) no-repeat;
@@ -27,12 +91,20 @@
     position:absolute;
     width: 1700px;
     height: 900px;
-    top:50%;
+    top:30px;
     right: 0%;
-    transform: translateY(-50%);
     background: url(../img/building.png) no-repeat 50% 100%;
 }
 
+#in {
+    position: absolute;
+    width: 75px;
+    height: 150px;
+    bottom: 50px;
+    left: 400px;
+    background: #fff;
+    
+}
 
 /* elevator */
 #elevator_area {
@@ -70,7 +142,7 @@
     background-size: cover;
 }
 .left_door {
-    z-index: 8;
+    z-index: 7;
 }
 .right_door {
     left: 65px;
@@ -82,7 +154,7 @@
     left:10%;
     top:550px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 9;
 }
 .button{
     position:relative;
@@ -131,7 +203,7 @@
     background-size: cover;
     background-position: right;
     border-radius: 15px 0px 0px 0px;
-    z-index: 9;
+    z-index: 8;
 }
 .project {
     position: relative;
@@ -193,7 +265,7 @@
     bottom: 120px;
     right: 155px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 9;
 }
 .floor_interior {
     position: relative;
@@ -202,4 +274,41 @@
     background-size: cover;
     background-position: right;
     border-radius: 0px 0px 0px 15px;
+    z-index: 8;
+}
+#people_1 {
+    bottom: 30px;
+    left: 70px;
+    height:120px;
+    z-index: 10;
+}
+#people_8 {
+    bottom: 30px;
+    left: 500px;
+    height:120px;
+    z-index: 10;
+}
+#people_9 {
+    bottom: 30px;
+    left: 250px;
+    height:120px;
+    z-index: 10;
+}
+#people_13 {
+    bottom: 30px;
+    left: 200px;
+    height:120px;
+    z-index: 10;
+}
+#people_14 {
+    bottom: 30px;
+    left: 600px;
+    height:120px;
+    z-index: 10;
+}
+#people_15 {
+    bottom: 30px;
+    left: 900px;
+    height:120px;
+    z-index: 10;
 }

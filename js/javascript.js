@@ -2,18 +2,29 @@ $(document).ready(function(){
     var ht =$(window).height();
     
     $("#container").css("height",ht);
+    $("#open").css("height",ht);
+    
+    $(function(){
+        $('#open_2').eraser({
+            progressFunction: function(p) {
+                $('#progress').html(Math.round(p*100));
+                if ($('#progress').text() >= 1) {
+                    $("#open").fadeOut(6000);
+                }
+            }
+        });
+    });
     
     $("#button_area").hide();
     
     $(".elevator_sw").click(Event, function(){
         $(".left_door").animate({right:"130px"},3000);
         $(".right_door").animate({left:"-65px"},3000);
-        $("#button_area").show(3000);
+        $("#button_area").delay(2000).show(1000);
     });
     
-    
     $("#button_3").click(Event, function(){
-        $("#button_area").hide(3000);
+        $("#button_area").hide(1000);
         $(".left_door").stop().animate({right:"65px"},3000);
         $(".right_door").stop().animate({left:"65px"},3000, function(){
             $(".floor_door, .floor").removeClass("on", function(){
@@ -30,7 +41,7 @@ $(document).ready(function(){
         });
     });
     $("#button_2").click(Event, function(){
-        $("#button_area").hide(3000);
+        $("#button_area").hide(1000);
         $(".left_door").stop().animate({right:"65px"},3000);
         $(".right_door").stop().animate({left:"65px"},3000, function(){
             $(".floor_door, .floor").removeClass("on", function(){
@@ -47,7 +58,7 @@ $(document).ready(function(){
         });
     });
     $("#button_1").click(Event, function(){
-        $("#button_area").hide(3000);
+        $("#button_area").hide(1000);
         $(".left_door").stop().animate({right:"65px"},3000);
         $(".right_door").stop().animate({left:"65px"},3000, function(){
             $(".floor_door, .floor").removeClass("on", function(){
