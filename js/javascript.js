@@ -1,9 +1,10 @@
 $(document).ready(function(){
+//    높이 설정
     var ht =$(window).height();
-    
     $("#container").css("height",ht);
     $("#open").css("height",ht);
     
+//    시작 화면
     $(function(){
         $('#open_2').eraser({
             progressFunction: function(p) {
@@ -14,7 +15,14 @@ $(document).ready(function(){
             }
         });
     });
+//    입장
+    $("#in").click(Event, function(){
+        $("#door_1, #floor_1").addClass("on");
+        $("#in").fadeOut(3000);
+        $("#container > img, #background").css("opacity","0.6");
+    });
     
+//    엘리베이터
     $("#button_area").hide();
     
     $(".elevator_sw").click(Event, function(){
