@@ -6,34 +6,19 @@
     min-height: 970px;
     z-index: 100;
 }
-#open_1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 100;
-    box-shadow: 0px 0px 20px 0px #707070;
-}
-
-#open_2 {
+#open_img {
     position: absolute;
     width:100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 101;
+    cursor: pointer;
+    z-index: 100;
+}
+#progress {
+    opacity: 0;
 }
 
-#progress {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    color: black;
-    pointer-events: none;
-    z-index: 300;
-    text-shadow: 0px 0px 2px #FFFFFF;
-}
 
 /* container */
 #container {
@@ -46,7 +31,6 @@
     position: absolute;
     transition: all 10s;
 }
-
 #container > img:nth-child(1) {
     top: 770px;
     left: 70px;
@@ -54,7 +38,7 @@
 }
 #container > img:nth-child(2) {
     top: 820px;
-    left: 500px;
+    left: 450px;
     z-index: 10;
 }
 #container > img:nth-child(3) {
@@ -70,10 +54,11 @@
 }
 #container > img:nth-child(5) {
     top: 840px;
-    left: 600px;
+    left: 550px;
     width:50px;
     z-index: 10;
 }
+
 /* background */
 #background {
     position: absolute;
@@ -99,15 +84,43 @@
     right: 0%;
     background: url(../img/building.png) no-repeat 50% 100%;
 }
-
-#in {
+#entrance {
     position: absolute;
     width: 75px;
     height: 150px;
     bottom: 50px;
     left: 400px;
-    background: #fff;
+    text-align: center;
+}
+#entrance i{
+    position: relative;
+    display: block;
+    top: 0px;
+    font-size: 50px;
+    color: red;
+    animation-name: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#entrance p{
+    position: relative;
+    display: block;
+    width: 75px;
+    height: 100px;
+    border: 1px dashed white;
+    color: white;
     cursor: pointer;
+}
+#entrance p span:nth-child(1){
+    display: block;
+    height: 40px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+#entrance p span:nth-child(2), #entrance p span:nth-child(3){
+    display: block;
+    font-size: 15px;
 }
 
 /* elevator */
@@ -128,13 +141,13 @@
     opacity: 0;
     transition:all 3s;
 }
-#door_3{
+#floor_door_3{
     top:30px
 }
-#door_2{
+#floor_door_2{
     top:280px
 }
-#door_1{
+#floor_door_1{
     top:530px;
 }
 .door {
@@ -167,18 +180,19 @@
     margin-bottom: 5px;
     background-size: contain;
 }
-.button:nth-child(1) {
-    background: url(../img/button_3.png) no-repeat;
+#button_3 {
+    background: url(../img/button_off_3.png) no-repeat;
 }
-.button:nth-child(2) {
-    background: url(../img/button_2.png) no-repeat;
+#button_2 {
+    background: url(../img/button_off_2.png) no-repeat;
 }
-.button:nth-child(3) {
-    background: url(../img/button_1.png) no-repeat;
+#button_1 {
+    background: url(../img/button_off_1.png) no-repeat;
 }
 .button span{
     padding-left: 25px; 
 }
+
 
 /* floor */
 .floor {
@@ -204,7 +218,7 @@
 .project_area {
     position: relative;
     height:180px;
-    background:url(../img/project_area2.png);
+    background:url(../img/project_area.png);
     background-size: cover;
     background-position: right;
     border-radius: 15px 0px 0px 0px;
@@ -264,6 +278,18 @@
     width:100px;
     height:120px;
     margin: 30px 100px 25px 100px; 
+}
+.floor i{
+    position: absolute;
+    bottom: 140px;
+    right: 155px;
+    font-size: 30px;
+    color: red;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    z-index: 9;
 }
 .elevator_sw{
     position: absolute;
@@ -408,4 +434,10 @@
     left: 900px;
     height:120px;
     z-index: 10;
+}
+
+@keyframes arrow{
+    0% {transform: translateY(0%);}
+    50% {transform: translateY(20%);}
+    100% {transform: translateY(0%);}
 }
