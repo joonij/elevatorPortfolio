@@ -215,7 +215,7 @@
     width: 1220px;
     margin-bottom: 65px;
 }
-.project_area {
+.wall_interior {
     position: relative;
     height:180px;
     background:url(../img/project_area.png);
@@ -224,10 +224,19 @@
     border-radius: 15px 0px 0px 0px;
     z-index: 8;
 }
+.project_area {
+    display: inline;
+    width: 100%;
+}
 .project {
-    position: relative;
-    display:inline-block;
-    background:#0000ff;
+    float: left;
+    box-sizing: border-box;
+    border: 3px dashed white;
+}
+.project a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 #floor_3 .project:nth-child(1) {
     width:200px;
@@ -248,11 +257,12 @@
     width:200px;
     height:100px;
     margin: 30px 100px 35px 270px;
+    background: url(../img/gallery/izakaya.png) no-repeat;
 }
 #floor_2 .project:nth-child(2) {
     width:135px;
     height:135px;
-    margin: 30px 115px 0px 70px; 
+    margin: 30px 115px 0px 70px;
 }
 #floor_2 .project:nth-child(3) {
     width:80px;

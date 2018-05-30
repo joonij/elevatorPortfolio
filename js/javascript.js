@@ -7,18 +7,28 @@ $(document).ready(function(){
 //    시작 화면
     $("#entrance").hide();
     
-    $(function(){
-        $('#open_img').eraser({
-            progressFunction: function(p) {
-                $('#progress').html(Math.round(p*100));
-                if ($('#progress').text() >= 1) {
-                    $("#open").fadeOut(4000, function(){
-                        $("#entrance").fadeIn(2000);
-                    });
-                }
-            }
+    var agent = navigator.userAgent.toLowerCase();
+    if (agent.indexOf("msie") > -1 || agent.indexOf("trident") > -1) {
+        $('#open_img').click(Event, function(){
+            $("#open").fadeOut(4000, function(){
+                $("#entrance").fadeIn(2000);
+            });
         });
-    });
+    } else {
+        $(function(){
+            $('#open_img').eraser({
+                progressFunction: function(p) {
+                    $('#progress').html(Math.round(p*100));
+                    if ($('#progress').text() >= 1) {
+                        $("#open").fadeOut(4000, function(){
+                            $("#entrance").fadeIn(2000);
+                        });
+                    }
+                }
+            });
+        });
+    }
+    
 //    입장
     $("#entrance span").click(Event, function(){
         $("#floor_door_1, #floor_1").addClass("on");
