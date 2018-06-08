@@ -32,7 +32,7 @@
     transition: all 10s;
 }
 #container > img:nth-child(1) {
-    top: 770px;
+    top: 800px;
     left: 70px;
     z-index: 10;
 }
