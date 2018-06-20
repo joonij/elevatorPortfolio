@@ -6,6 +6,10 @@ $(document).ready(function(){
     
 //    시작 화면
     $("#entrance").hide();
+    $("#open, #container").css("display","none");
+    $("#open").fadeIn(2000, function(){
+        $("#container").fadeIn(1000);
+    });
     
     var agent = navigator.userAgent.toLowerCase();
     if (agent.indexOf("msie") > -1 || agent.indexOf("trident") > -1) {
@@ -62,6 +66,7 @@ $(document).ready(function(){
                             $(".left_door").stop().animate({right:"65px"},2000);
                             $(".right_door").stop().animate({left:"65px"},2000);
                             $(".floor i").delay(2000).fadeIn(1000);
+                            $(".project_area").not($("#floor_3 .project_area")).css("display","none");
                         });
                     });
                 });
@@ -81,6 +86,7 @@ $(document).ready(function(){
                             $(".left_door").stop().animate({right:"65px"},2000);
                             $(".right_door").stop().animate({left:"65px"},2000);
                             $(".floor i").delay(2000).fadeIn(1000);
+                            $(".project_area").not($("#floor_2 .project_area")).css("display","none");
                         });
                     });
                 });
@@ -100,6 +106,7 @@ $(document).ready(function(){
                             $(".left_door").stop().animate({right:"65px"},2000);
                             $(".right_door").stop().animate({left:"65px"},2000);
                             $(".floor i").delay(2000).fadeIn(1000);
+                            $(".project_area").not($("#floor_1 .project_area")).css("display","none");
                         });
                     });
                 });

@@ -19,7 +19,6 @@
     opacity: 0;
 }
 
-
 /* container */
 #container {
     width:100%;
@@ -231,60 +230,88 @@
 .project {
     float: left;
     box-sizing: border-box;
-    border: 3px dashed white;
 }
 .project a {
     display: block;
+    border: 5px solid #000;
+    background-size: cover;
+    margin: 0 auto;
+    transition: all 0.7s;
+}
+.project a div{
+    transition: all 0.7s;
+}
+.project a div span{
+    transition: all 0.7s;
+}
+.project a span{
+    display: none;
+}
+.project a:hover div{
     width: 100%;
     height: 100%;
+    padding: 3px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #fff;
+    box-sizing: border-box;
 }
-#floor_3 .project:nth-child(1) {
+.project a:hover span{
+    display: block;
+    transform: translateY(50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+#floor_3 .project:nth-child(1) a{
     width:200px;
     height:100px;
     margin: 30px 70px 35px 270px;
 }
-#floor_3 .project:nth-child(2) {
+#floor_3 .project:nth-child(2) a{
     width:600px;
     height:120px;
     margin: 30px 70px 15px 70px; 
 }
-#floor_3 .project:nth-child(3) {
+#floor_3 .project:nth-child(3) a{
     width:110px;
     height:130px;
     margin: 30px 70px 15px 70px;
 }
-#floor_2 .project:nth-child(1) {
+#floor_2 .project:nth-child(1) a{
     width:200px;
     height:100px;
     margin: 30px 100px 35px 270px;
-    background: url(../img/gallery/izakaya.png) no-repeat;
+    background: url(../img/gallery/project_img_1.png) no-repeat 50% 50%;
 }
-#floor_2 .project:nth-child(2) {
+#floor_2 .project:nth-child(2) a{
     width:135px;
     height:135px;
     margin: 30px 115px 0px 70px;
+    background: url(../img/gallery/project_img_2.png) no-repeat 50% 50%;
 }
-#floor_2 .project:nth-child(3) {
+#floor_2 .project:nth-child(3) a{
     width:80px;
     height:130px;
     margin: 30px 60px 15px 115px;
 }
-#floor_2 .project:nth-child(4) {
+#floor_2 .project:nth-child(4) a{
     width:255px;
-    height:70px;
+    height: 70px;
     margin: 30px 70px 65px 60px;
+    background: url(../img/gallery/project_img_4.png) no-repeat 50% 50%;
 }
-#floor_1 .project:nth-child(1) {
+#floor_1 .project:nth-child(1) a{
     width:110px;
     height:110px;
     margin: 30px 100px 25px 100px;
 }
-#floor_1 .project:nth-child(2) {
+#floor_1 .project:nth-child(2) a{
     width:200px;
     height:90px;
     margin: 30px 100px 45px 100px; 
 }
-#floor_1 .project:nth-child(3) {
+#floor_1 .project:nth-child(3) a{
     width:100px;
     height:120px;
     margin: 30px 100px 25px 100px; 
@@ -444,6 +471,11 @@
     left: 900px;
     height:120px;
     z-index: 10;
+}
+.spec_area {
+    width: 50%;
+    height: 100%;
+    float: left;
 }
 
 @keyframes arrow{
