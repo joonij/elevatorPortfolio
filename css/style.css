@@ -1,3 +1,5 @@
+@font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory Bold.ttf")}
+
 /* open */
 #open {
     position: absolute;
@@ -91,7 +93,7 @@
     left: 400px;
     text-align: center;
 }
-#entrance i{
+#entrance > i{
     position: relative;
     display: block;
     top: 0px;
@@ -182,11 +184,8 @@
 #button_3 {
     background: url(../img/button_off_3.png) no-repeat;
 }
-#button_2 {
-    background: url(../img/button_off_2.png) no-repeat;
-}
-#button_1 {
-    background: url(../img/button_off_1.png) no-repeat;
+#button_3:active {
+    background: url(../img/button_on_3.png) no-repeat;
 }
 .button span{
     padding-left: 25px; 
@@ -316,7 +315,7 @@
     height:120px;
     margin: 30px 100px 25px 100px; 
 }
-.floor i{
+.floor > i{
     position: absolute;
     bottom: 140px;
     right: 155px;
@@ -440,44 +439,89 @@
     bottom: 30px;
     left: 70px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 #floor_1 > img:nth-child(2) {
     bottom: 30px;
     left: 500px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 #floor_1 > img:nth-child(3) {
     bottom: 30px;
     left: 250px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 #floor_1 > img:nth-child(4) {
     bottom: 30px;
     left: 200px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 #floor_1 > img:nth-child(5) {
     bottom: 30px;
     left: 600px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 #floor_1 > img:nth-child(6) {
     bottom: 30px;
     left: 900px;
     height:120px;
+    opacity: 0.7;
     z-index: 10;
 }
 .spec_area {
+    position: relative;
     width: 50%;
     height: 100%;
     float: left;
 }
-
+.spec_area:nth-child(1) p {
+    width: 500px;
+    margin: 20px auto 0 auto;
+    border: 1px solid #000;
+}
+.spec_area:nth-child(1) span {
+    display: block;
+    font-size: 20px;
+    font-family:"Maplestory_Bold";
+    letter-spacing: 2px;
+    text-align: center;
+    color: #000;
+}
+#link {
+    position: relative;
+    width: 300px;
+}
+#link > i{
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: red;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+#link a{
+    display: block;
+    font-size: 20px;
+    font-family: "Maplestory_Bold";
+    color: #000;
+    border: 1px solid #000;
+}
+#link a:nth-child(1){
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 @keyframes arrow{
     0% {transform: translateY(0%);}
     50% {transform: translateY(20%);}
