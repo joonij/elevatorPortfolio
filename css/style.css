@@ -1,4 +1,5 @@
-@font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory Bold.ttf")}
+@font-face{font-family:"Maplestory_Bold"; src:url("../fonts/Maplestory-Light.woff")}
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
 /* open */
 #open {
@@ -118,10 +119,12 @@
     height: 40px;
     padding-top: 10px;
     font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 #entrance p span:nth-child(2), #entrance p span:nth-child(3){
     display: block;
     font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* elevator */
@@ -188,7 +191,8 @@
     background: url(../img/button_on_3.png) no-repeat;
 }
 .button span{
-    padding-left: 25px; 
+    padding-left: 25px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 
@@ -229,91 +233,55 @@
 .project {
     float: left;
     box-sizing: border-box;
+    border: 2px solid #000;
 }
-.project a {
-    display: block;
-    border: 5px solid #000;
-    background-size: cover;
-    margin: 0 auto;
-    transition: all 0.7s;
+#floor_3 .project:nth-child(1){
+    width:122px;
+    height:150px;
+    margin: 15px 75px 0px 270px;
+    background: url(../img/gallery/Gallery_img_1.jpg) no-repeat 50% 50%;
 }
-.project a div{
-    transition: all 0.7s;
+#floor_3 .project:nth-child(2){
+    width:241px;
+    height:150px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_2.jpg) no-repeat 50% 50%;
 }
-.project a div span{
-    transition: all 0.7s;
+#floor_3 .project:nth-child(3){
+    width:300px;
+    height:147px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_7.jpg) no-repeat 50% 50%;
 }
-.project a span{
-    display: none;
+#floor_3 .project:nth-child(4){
+    width:118px;
+    height: 150px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_8.jpg) no-repeat 50% 50%;
 }
-.project a:hover div{
-    width: 100%;
-    height: 100%;
-    padding: 3px;
-    background: rgba(0,0,0,0.8);
-    border: 1px solid #fff;
-    box-sizing: border-box;
+#floor_2 .project:nth-child(1){
+    width:191px;
+    height:150px;
+    margin: 15px 75px 0px 270px;
+    background: url(../img/gallery/Gallery_img_4.jpg) no-repeat 50% 50%;
 }
-.project a:hover span{
-    display: block;
-    transform: translateY(50%);
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
+#floor_2 .project:nth-child(2){
+    width:180px;
+    height:150px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_5.jpg) no-repeat 50% 50%;
 }
-#floor_3 .project:nth-child(1) a{
+#floor_2 .project:nth-child(3){
     width:200px;
-    height:100px;
-    margin: 30px 70px 35px 270px;
+    height:150px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_6.jpg) no-repeat 50% 50%;
 }
-#floor_3 .project:nth-child(2) a{
-    width:600px;
-    height:120px;
-    margin: 30px 70px 15px 70px; 
-}
-#floor_3 .project:nth-child(3) a{
-    width:110px;
-    height:130px;
-    margin: 30px 70px 15px 70px;
-}
-#floor_2 .project:nth-child(1) a{
-    width:200px;
-    height:100px;
-    margin: 30px 100px 35px 270px;
-    background: url(../img/gallery/project_img_1.png) no-repeat 50% 50%;
-}
-#floor_2 .project:nth-child(2) a{
-    width:135px;
-    height:135px;
-    margin: 30px 115px 0px 70px;
-    background: url(../img/gallery/project_img_2.png) no-repeat 50% 50%;
-}
-#floor_2 .project:nth-child(3) a{
-    width:80px;
-    height:130px;
-    margin: 30px 60px 15px 115px;
-}
-#floor_2 .project:nth-child(4) a{
-    width:255px;
-    height: 70px;
-    margin: 30px 70px 65px 60px;
-    background: url(../img/gallery/project_img_4.png) no-repeat 50% 50%;
-}
-#floor_1 .project:nth-child(1) a{
-    width:110px;
-    height:110px;
-    margin: 30px 100px 25px 100px;
-}
-#floor_1 .project:nth-child(2) a{
-    width:200px;
-    height:90px;
-    margin: 30px 100px 45px 100px; 
-}
-#floor_1 .project:nth-child(3) a{
-    width:100px;
-    height:120px;
-    margin: 30px 100px 25px 100px; 
+#floor_2 .project:nth-child(4){
+    width:125px;
+    height: 150px;
+    margin: 15px 75px 0px 50px;
+    background: url(../img/gallery/Gallery_img_3.jpg) no-repeat 50% 50%;
 }
 .floor > i{
     position: absolute;
@@ -479,48 +447,24 @@
 }
 .spec_area {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 50%;
     height: 100%;
     float: left;
 }
-.spec_area:nth-child(1) p {
+.spec_area p {
     width: 500px;
     margin: 20px auto 0 auto;
     border: 1px solid #000;
 }
-.spec_area:nth-child(1) span {
+.spec_area span {
     display: block;
     font-size: 20px;
     font-family:"Maplestory_Bold";
     letter-spacing: 2px;
     text-align: center;
     color: #000;
-}
-#link {
-    position: relative;
-    width: 300px;
-}
-#link > i{
-    position: relative;
-    left: 40%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    color: red;
-    animation-name: arrow;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-}
-#link a{
-    display: block;
-    font-size: 20px;
-    font-family: "Maplestory_Bold";
-    color: #000;
-    border: 1px solid #000;
-}
-#link a:nth-child(1){
-    margin-top: 0;
-    margin-bottom: 30px;
 }
 @keyframes arrow{
     0% {transform: translateY(0%);}
