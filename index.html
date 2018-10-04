@@ -1,44 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>My Portfolio(elevator)</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <title>Vincent van Gogh Gallery</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src='js/jquery.eraser.js' type='text/javascript'></script>
-    <script type="text/javascript" src="js/javascript.js"></script>
+    <script src="js/javascript.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <span id="open">
-        <img id="open_img" src="img/open.png" alt="open">
+    <div id="open">
+        <img src="img/open.png" alt="open">
         <div id="progress">0</div>
-    </span>
-    <div id="container">
-        <img class="people" src="img/people_2.png" alt="people_2">
-        <img class="people" src="img/people_3.png" alt="people_3">
-        <img class="people" src="img/people_5.png" alt="people_5">
-        <img class="people" src="img/people_11.png" alt="people_11">
-        <img class="people" src="img/people_18.png" alt="people_18">
-        <div id="background">
-            <img src="img/background_img.png" alt="bg_img">
-        </div>
-        <div id="building">
-            <div id="entrance">
+    </div>
+    <div class="wrap">
+        <div class="people people_1"></div>
+        <div class="people people_2"></div>
+        <div class="people people_3"></div>
+        <div class="people people_4"></div>
+        <div class="people people_5"></div>
+        <div class="building">
+            <div class="entrance">
                 <i class="fas fa-angle-down"></i>
-                <p>
+                <p class="click_area">
                     <span>CLICK</span>
-                    <span>Entrance</span>
-                    <span>Gallery</span>
+                    Entrance<br />
+                    Gallery
                 </p>
             </div>
-            <div id="elevator_area">
+            <div class="elevator_area">
                 <div id="floor_door_3" class="floor_door">
                     <div class="door left_door"></div>
                     <div class="door right_door"></div>
@@ -52,22 +48,22 @@
                     <div class="door right_door"></div>
                 </div>
                 <div id="button_area">
-                    <div id="button_3" class="button"><span>작품전</span></div>
-                    <div id="button_2" class="button"><span>작품전</span></div>
-                    <div id="button_1" class="button"><span>Informain</span></div>
+                    <div id="button_3" class="button">작품전</div>
+                    <div id="button_2" class="button">작품전</div>
+                    <div id="button_1" class="button">Informain</div>
                 </div>
             </div>
             <div id="floor_3" class="floor">
-                <img class="people" src="img/people_6.png" alt="people_6">
-                <img class="people" src="img/people_1.png" alt="people_1">
-                <img class="people" src="img/people_8.png" alt="people_8">
-                <img class="people" src="img/people_15.png" alt="people_15">
-                <img class="people" src="img/people_13.png" alt="people_13">
-                <img class="people" src="img/people_14.png" alt="people_14">
-                <img class="people" src="img/people_7.png" alt="people_7">
-                <img class="people" src="img/people_9.png" alt="people_9">
+                <div class="people people_6"></div>
+                <div class="people people_7"></div>
+                <div class="people people_8"></div>
+                <div class="people people_9"></div>
+                <div class="people people_10"></div>
+                <div class="people people_11"></div>
+                <div class="people people_12"></div>
+                <div class="people people_13"></div>
                 <i class="fas fa-angle-down"></i>
-                <img class="elevator_sw" src="img/ele_switch.png" alt="elevator3_sw">
+                <img class="elevator_sw" src="img/ele_switch.png" alt="3층 엘레베이터 스위치">
                 <div class="wall_interior">
                     <ul class="project_area">
                         <li class="project"></li>
@@ -79,15 +75,15 @@
                 <div class="floor_interior"></div>
             </div>
             <div id="floor_2" class="floor">
-                <img class="people" src="img/people_5.png" alt="people_5">
-                <img class="people" src="img/people_8.png" alt="people_8">
-                <img class="people" src="img/people_13.png" alt="people_13">
-                <img class="people" src="img/people_1.png" alt="people_1">
-                <img class="people" src="img/people_16.png" alt="people_16">
-                <img class="people" src="img/people_14.png" alt="people_14">
-                <img class="people" src="img/people_9.png" alt="people_9">
+                <div class="people people_14"></div>
+                <div class="people people_15"></div>
+                <div class="people people_16"></div>
+                <div class="people people_17"></div>
+                <div class="people people_18"></div>
+                <div class="people people_19"></div>
+                <div class="people people_20"></div>
                 <i class="fas fa-angle-down"></i>
-                <img class="elevator_sw" src="img/ele_switch.png" alt="elevator2_sw">
+                <img class="elevator_sw" src="img/ele_switch.png" alt="2층 엘레베이터 스위치">
                 <div class="wall_interior">
                     <ul class="project_area">
                         <li class="project"></li>
@@ -99,21 +95,21 @@
                 <div class="floor_interior"></div>
             </div>
             <div id="floor_1" class="floor">
-                <img class="people" src="img/people_1.png" alt="people_1">
-                <img class="people" src="img/people_8.png" alt="people_8">
-                <img class="people" src="img/people_9.png" alt="people_9">
-                <img class="people" src="img/people_13.png" alt="people_13">
-                <img class="people" src="img/people_14.png" alt="people_14">
-                <img class="people" src="img/people_15.png" alt="people_15">
+                <div class="people people_21"></div>
+                <div class="people people_22"></div>
+                <div class="people people_23"></div>
+                <div class="people people_24"></div>
+                <div class="people people_25"></div>
+                <div class="people people_26"></div>
                 <i class="fas fa-angle-down"></i>
-                <img class="elevator_sw" src="img/ele_switch.png" alt="elevator1_sw">
+                <img class="elevator_sw" src="img/ele_switch.png" alt="1층 엘레베이터 스위치">
                 <div class="wall_interior">
                     <div class="spec_area">
                         <p>
-                            <span>빈센트 반 고흐 겔러리에 방문해 주셔서 감사합니다.</span>
-                            <span>고흐의 느낌과 감성이 살아있는 작품들이</span>
-                            <span>위층에 전시되어 있으니</span>
-                            <span>우측 엘레베이터를 이용하여 위층으로 올라가주십시요.</span>
+                            빈센트 반 고흐 겔러리에 방문해 주셔서 감사합니다.<br />
+                            고흐의 느낌과 감성이 살아있는 작품들이<br />
+                            위층에 전시되어 있으니<br />
+                            우측 엘레베이터를 이용하여 위층으로 올라가주십시요.
                         </p>
                     </div>
                 </div>

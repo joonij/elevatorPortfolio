@@ -1,31 +1,26 @@
 $(document).ready(function(){
-//    높이 설정
-    var ht =$(window).height();
-    $("#container").css("height",ht);
-    $("#open").css("height",ht);
-    
 //    시작 화면
-    $("#entrance").hide();
-    $("#open, #container").css("display","none");
+    $(".entrance").hide();
+    $("#open, .wrap").css("display","none");
     $("#open").fadeIn(1000, function(){
-        $("#container").fadeIn(500);
+        $(".wrap").fadeIn(500);
     });
     
     var agent = navigator.userAgent.toLowerCase();
     if (agent.indexOf("msie") > -1 || agent.indexOf("trident") > -1) {
-        $('#open_img').click(Event, function(){
+        $('#open img').click(Event, function(){
             $("#open").fadeOut(2500, function(){
-                $("#entrance").fadeIn(2000);
+                $(".entrance").fadeIn(2000);
             });
         });
     } else {
         $(function(){
-            $('#open_img').eraser({
+            $('#open img').eraser({
                 progressFunction: function(p) {
                     $('#progress').html(Math.round(p*100));
                     if ($('#progress').text() >= 1) {
                         $("#open").fadeOut(2500, function(){
-                            $("#entrance").fadeIn(2000);
+                            $(".entrance").fadeIn(2000);
                         });
                     }
                 }
@@ -34,10 +29,10 @@ $(document).ready(function(){
     }
     
 //    입장
-    $("#entrance span").click(Event, function(){
+    $(".entrance .click_area").click(Event, function(){
         $("#floor_door_1, #floor_1").addClass("on");
-        $("#entrance").fadeOut(2000);
-        $("#container > img, #background").css("opacity","0.6");
+        $(".entrance").fadeOut(2000);
+        $(".wrap > img, #background").css("opacity","0.6");
     });
     
 //    엘리베이터
